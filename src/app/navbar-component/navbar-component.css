@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #034f84;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allows items to drop to next line on small screens */
+  font-family: sans-serif;
+  justify-content: space-between; /* Pushes title to left and nav to right */
+  align-items: center;
+}
+
+.head h1 {
+  color: deepskyblue;
+  font-size: 28px; /* Slightly smaller base size for better fit */
+  font-weight: normal;
+}
+
+.navbar-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.navbar-list li {
+  padding: 10px 15px;
+}
+
+.navbar-list li a {
+  text-decoration: none;
+  color: deepskyblue;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-list li a:hover {
+  color: white;
+}
+
+/* --- Responsive Media Query --- */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stacks Title on top of Nav */
+    text-align: center;
+  }
+
+  .head h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-list {
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .navbar-list li {
+    padding: 5px 10px; /* Tighter spacing for mobile */
+  }
+}

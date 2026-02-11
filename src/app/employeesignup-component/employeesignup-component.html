@@ -1,0 +1,78 @@
+<div class="employee-signup">
+  <div class="sign-up">
+    <h1>Employee Sign-Up</h1>
+
+    <form class="common-form" #signupForm="ngForm" (ngSubmit)="onSignup(signupForm)">
+
+      <div class="input-group">
+        <input
+          class="form-input"
+          type="text"
+          name="name"
+          ngModel
+          required
+          minlength="5"
+          #name="ngModel"
+          placeholder="Enter Name">
+        <small *ngIf="name.invalid && name.touched" class="error-text">
+          Name must be at least 5 characters.
+        </small>
+      </div>
+
+      <div class="input-group">
+        <input
+          class="form-input"
+          type="email"
+          name="email"
+          ngModel
+          required
+          email
+          #email="ngModel"
+          placeholder="Enter Email">
+        <small *ngIf="email.invalid && email.touched" class="error-text">
+          Please enter a valid email address.
+        </small>
+      </div>
+
+      <div class="input-group">
+        <input
+          class="form-input"
+          type="text"
+          name="department"
+          ngModel
+          required
+          minlength="2"
+          maxlength="50"
+          #department="ngModel"
+          placeholder="Enter Department">
+        <small *ngIf="department.invalid && department.touched" class="error-text">
+          Please enter a valid department (min 2 chars).
+        </small>
+      </div>
+
+      <div class="input-group">
+        <input
+          class="form-input"
+          type="password"
+          name="password"
+          ngModel
+          required
+          minlength="8"
+          #password="ngModel"
+          placeholder="Create Password">
+        <small *ngIf="password.invalid && password.touched" class="error-text">
+          Password must be at least 8 characters.
+        </small>
+      </div>
+
+      <button
+        type="submit"
+        class="form-button"
+        [disabled]="signupForm.invalid">
+        Signup
+      </button>
+
+      <a routerLink="/employeelogin" class="loginLink">Already have an account? Click to login</a>
+    </form>
+  </div>
+</div>

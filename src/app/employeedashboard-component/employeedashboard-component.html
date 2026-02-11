@@ -1,0 +1,29 @@
+<div class="dashboard-wrapper">
+  <h2>Admin Dashboard</h2>
+
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="!loading && error" class="error">{{ error }}</div>
+
+  <div class="table-container" *ngIf="!loading && dashboardData.length > 0">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Department</th>
+          <th>Date of Joining</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of dashboardData">
+          <td>{{ emp.employeeId }}</td>
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.email }}</td>
+          <td>{{ emp.department }}</td>
+          <td>{{ emp.dateOfJoining | date:'mediumDate' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

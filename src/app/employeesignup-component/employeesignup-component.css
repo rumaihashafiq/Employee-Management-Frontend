@@ -1,0 +1,86 @@
+/* .sign-up{
+text-align: center;
+margin-bottom: 50px;
+margin-top: 80px;
+color: deepskyblue;
+}
+
+.sign-up h1{
+  font-size: 25px;
+}
+.loginLink{
+  margin-top: 15px;
+text-decoration: underline;
+color: deepskyblue;
+} */
+
+/* Container that holds the form */
+.employee-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Centers the form vertically on the screen */
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* The form box itself */
+.sign-up {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px; /* Limits width on desktop */
+  text-align: center;
+  color: deepskyblue;
+}
+
+.sign-up h1 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+/* Form layout using Flexbox */
+.common-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Creates equal spacing between all inputs and buttons */
+}
+
+/* Styling the inputs from your HTML */
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px; /* Prevents auto-zoom on mobile devices */
+  outline-color: deepskyblue;
+}
+
+/* Styling the button from your HTML */
+.form-button {
+  padding: 12px;
+  background-color: deepskyblue;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.form-button:hover {
+  opacity: 0.8;
+}
+
+/* The link at the bottom */
+.loginLink {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: underline;
+  color: deepskyblue;
+  font-size: 14px;
+}

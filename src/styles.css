@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+}
+.employee-login{
+ margin-left: 0;
+ margin-right: 0;
+}
+
+.common-form{
+    text-align: center;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 300px;
+}
+
+.form-input{
+height: 35px;
+margin-bottom: 20px;
+padding-left: 10px;
+border:  1px solid deepskyblue;
+color: deepskyblue;
+;
+}
+.form-button{
+height: 35px;
+cursor: pointer;
+border:  1px solid deepskyblue;
+
+}
