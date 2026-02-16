@@ -21,7 +21,7 @@ h2 {
   text-align: center;
   margin-bottom: 25px;
   font-weight: normal;
-  color: deepskyblue;
+  color:  #034f84;
 }
 
 .form-group {
@@ -33,22 +33,22 @@ h2 {
 label {
   margin-bottom: 5px;
   font-weight: 500;
-  color: deepskyblue;
+  color:  #034f84;
 }
 
 input {
   padding: 10px;
-  border: 1px solid deepskyblue;
+  border: 1px solid  #034f84;
   border-radius: 6px;
   font-size: 1rem;
- color: deepskyblue;
+ color:  #034f84;
 }
 
 button {
   width: 100%;
   padding: 12px;
   margin-top: 10px;
-  background-color: deepskyblue;
+  background-color:  #034f84;
   color: white;
   font-weight: bold;
   border: none;

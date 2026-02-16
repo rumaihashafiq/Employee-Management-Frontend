@@ -1,67 +1,96 @@
-.dashboard-wrapper {
-  max-width: 1200px;
-  margin: 30px auto;
+*{
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+.dashboard-container {
+  background: #f5f7fb;
+  min-height: 100vh;
   padding: 20px;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
+h1{
+  font-weight: normal;
+  color:  #034f84;
+  font-family: sans-serif;
+  font-size: 30px;
 }
-
-.loading {
-  text-align: center;
-  font-weight: bold;
-  color: #007bff;
-}
-
-.error {
-  text-align: center;
-  color: red;
-  font-weight: bold;
-}
-
-/* Responsive table container */
-.table-container {
-  overflow-x: auto;
-}
-
-table {
+.employee-profile{
   width: 100%;
-  border-collapse: collapse;
-  min-width: 600px; /* prevents table from collapsing too small */
+  margin: 20px;
+
+
+}
+.profile{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.profile h3{
+    font-size: 20px;
+  color:  #034f84;
+}
+.employee-profile button{
+  margin: 10px;
+  height: 30px;
+  color: white;
+  font-weight: normal;
+  background-color: #034f84 ;
+ /* margin: 10px; */
+ border: 1px solid deepskyblue;
+ height: 50px;
+ width: 150px;
+
 }
 
-th, td {
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  text-align: left;
+/* Cards */
+.card {
+  border-radius: 14px;
+  border: none;
 }
 
-th {
-  background-color: #f4f4f4;
+/* Project card hover effect */
+.project-card {
+  transition: all 0.2s ease-in-out;
 }
 
-/* Zebra striping for rows */
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  th, td {
-    padding: 8px 10px;
-    font-size: 0.9rem;
-  }
+/* Form labels */
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+.card-body{
+    display: flex;
+  flex-direction: column;
+}
+/* Inputs */
+.form-control {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid deepskyblue;
+
+}
+.card-body{
+justify-content: space-evenly;
+}
+/* Buttons */
+button {
+  border-radius: 8px;
+  font-weight: 600;
 }
 
-@media (max-width: 480px) {
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  th, td {
-    padding: 6px 8px;
-    font-size: 0.8rem;
-  }
+/* Dashboard headers */
+h4 {
+  font-weight: 700;
+  color: #333;
 }

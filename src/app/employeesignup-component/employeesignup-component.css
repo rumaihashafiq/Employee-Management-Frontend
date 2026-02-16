@@ -33,7 +33,7 @@ color: deepskyblue;
   width: 100%;
   max-width: 400px; /* Limits width on desktop */
   text-align: center;
-  color: deepskyblue;
+  color:  #034f84;
 }
 
 .sign-up h1 {
@@ -56,13 +56,13 @@ color: deepskyblue;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
   font-size: 16px; /* Prevents auto-zoom on mobile devices */
-  outline-color: deepskyblue;
+  outline-color: #034f84;
 }
 
 /* Styling the button from your HTML */
 .form-button {
   padding: 12px;
-  background-color: deepskyblue;
+  background-color: #034f84;
   color: white;
   border: none;
   border-radius: 6px;
@@ -81,6 +81,6 @@ color: deepskyblue;
   display: inline-block;
   margin-top: 15px;
   text-decoration: underline;
-  color: deepskyblue;
+  color:  #034f84;
   font-size: 14px;
 }

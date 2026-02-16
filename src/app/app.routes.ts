@@ -3,6 +3,7 @@ import { EmployeeloginComponent } from './employeelogin-component/employeelogin-
 import { EmployeesignupComponent } from './employeesignup-component/employeesignup-component';
 import { EmployeedashboardComponent } from './employeedashboard-component/employeedashboard-component';
 import { AdminLoginComponent } from './admin-login-component/admin-login-component';
+import { AdminDashboardComponent } from './admin-dashboard-component/admin-dashboard-component';
 
 export const routes: Routes = [
 {
@@ -18,7 +19,12 @@ export const routes: Routes = [
   component:EmployeedashboardComponent
 },
 {
-path:'**',
+path:'',
 component:AdminLoginComponent
+},
+{
+path:'adminDashboard',
+component:AdminDashboardComponent
+
 }
 ];

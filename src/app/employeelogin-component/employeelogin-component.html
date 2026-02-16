@@ -35,10 +35,10 @@
           name="password"
           ngModel
           required
-          minlength="6"
+          minlength="8"
           #password="ngModel">
         <small *ngIf="password.invalid && password.touched" class="error-text">
-          Password must be at least 6 characters.
+          Password must be at least 8 characters.
         </small>
       </div>
 

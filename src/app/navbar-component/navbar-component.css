@@ -21,7 +21,7 @@
 }
 
 .head h1 {
-  color: deepskyblue;
+  color: white;
   font-size: 28px; /* Slightly smaller base size for better fit */
   font-weight: normal;
 }
@@ -39,13 +39,13 @@
 
 .navbar-list li a {
   text-decoration: none;
-  color: deepskyblue;
+  color: white;
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .navbar-list li a:hover {
-  color: white;
+  color: deepskyblue;
 }
 
 /* --- Responsive Media Query --- */

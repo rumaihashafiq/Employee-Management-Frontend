@@ -4,7 +4,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-admin-login',
+  selector: 'app-admin-login-component',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './admin-login-component.html',
@@ -26,7 +26,7 @@ export class AdminLoginComponent {
 
     // Temporary hardcoded login for testing
     if (username === 'admin' && password === 'admin123') {
-      this.router.navigate(['/employeeDashboard']);
+      this.router.navigate(['/adminDashboard']);
     } else {
       this.loginError = true;
     }

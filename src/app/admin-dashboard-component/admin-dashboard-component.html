@@ -1,0 +1,86 @@
+<div class="admin-dashboard container-fluid py-4">
+
+  <h2 class="mb-4 text-primary">Admin Dashboard</h2>
+
+  <!-- EMPLOYEES TABLE -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-header bg-info text-white">
+      Employees
+    </div>
+    <div class="card-body table-responsive">
+      <table class="table table-striped table-hover align-middle mb-0">
+        <thead class="table-light">
+          <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Date of joining</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (e of employees; track e.employeeId) {
+          <tr>
+            <td>{{e.employeeId}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.department}}</td>
+            <td>{{e.dateOfjoining | date:'mediumDate'}}</td>
+            <td>
+              <span class="fw-bold" [ngClass]="e.isActive ? 'text-success' : 'text-danger'">
+                {{e.isActive ? 'Active' : 'Inactive'}}
+              </span>
+            </td>
+            <td>
+              @if (!e.isActive) {
+              <button class="btn btn-sm btn-danger" (click)="deleteEmployee(e.employeeId!)">
+                Delete
+              </button>
+              }
+            </td>
+          </tr>
+          }
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- PROJECTS TABLE -->
+  <div class="card shadow-sm">
+    <div class="card-header bg-warning text-white">
+      Projects
+    </div>
+    <div class="card-body table-responsive">
+      <table class="table table-striped table-hover align-middle mb-0">
+        <thead class="table-light">
+          <tr>
+            <th>Project ID</th>
+            <th>Project Name</th>
+            <th>Description</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Duration (Days)</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+          @for (p of projects; track p.projectId) {
+          <tr>
+            <td>{{p.projectId}}</td>
+            <td>{{p.projectName}}</td>
+            <td>{{p.description}}</td>
+            <td>{{p.startDate | date}}</td>
+            <td>{{p.endDate | date}}</td>
+            <td>{{p.duration}}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

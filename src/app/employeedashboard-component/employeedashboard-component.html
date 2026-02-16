@@ -1,29 +1,89 @@
-<div class="dashboard-wrapper">
-  <h2>Admin Dashboard</h2>
+<div class="dashboard-container container-fluid py-4">
+<h1>Dasboard</h1>
+  <!-- Profile Section -->
+  <div class="card shadow-sm mb-4">
 
-  <div *ngIf="loading">Loading...</div>
-  <div *ngIf="!loading && error" class="error">{{ error }}</div>
+    <div class="card-header bg-primary text-white mb-3 ">
+      👤 My Profile
+    </div>
+     <div class="employee-profile">
+        <div class="profile">
+          <h3>Name: {{employee.name}}</h3>
+          <h3>Department: {{employee.department}}</h3>
+          <h3>Date of joining: {{ employee.dateOfjoining ? (employee.dateOfjoining | date:'mediumDate') : 'N/A' }}</h3>
+        </div>
+        <button type="button" class="load-profile-btn" (click)="loadEmployeeProfile()">Load profile</button>
+      </div>
+    <div class="card-body row g-3 ms-3">
+      <h3 class="m-2 ">Edit Info</h3>
+      <div class="col-md-3">
+        <label>Name</label>t
+        <input class="form-control" placeholder="Employee Name" [(ngModel)]="employee.name" />
+      </div>
 
-  <div class="table-container" *ngIf="!loading && dashboardData.length > 0">
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Department</th>
-          <th>Date of Joining</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let emp of dashboardData">
-          <td>{{ emp.employeeId }}</td>
-          <td>{{ emp.name }}</td>
-          <td>{{ emp.email }}</td>
-          <td>{{ emp.department }}</td>
-          <td>{{ emp.dateOfJoining | date:'mediumDate' }}</td>
-        </tr>
-      </tbody>
-    </table>
+      <div class="col-md-4">
+        <label>Email</label>
+        <input class="form-control" placeholder="Employee Email" [(ngModel)]="employee.email" />
+      </div>
+
+      <div class="col-md-4">
+        <label>Department</label>
+        <input class="form-control" placeholder="Department" [(ngModel)]="employee.department" />
+      </div>
+
+      <div class="col-12 text-end">
+        <button class="btn btn-success px-4" (click)="updateProfile()">Save Profile</button>
+      </div>
+    </div>
   </div>
+
+
+  <!-- Projects List -->
+  <h4 class="mb-3">📂 My Projects</h4>
+
+  <div class="row g-3">
+    <div *ngFor="let p of projects" class="col-md-4">
+      <div class="card project-card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.projectName }}</h5>
+          <p class="text-muted">{{ p.description }}</p>
+          <p><strong>Start:</strong> {{ p.startDate | date }}</p>
+          <p><strong>End:</strong> {{ p.endDate | date }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Add Project -->
+  <div class="card shadow-sm mt-4">
+    <div class="card-header bg-dark text-white mb-4">
+      ➕ Add Project
+    </div>
+
+    <div class="card-body row g-4">
+      <div class="col-md-6 mb-4">
+        <input class="form-control" placeholder="Project Name" [(ngModel)]="newProject.projectName" />
+      </div>
+
+      <div class="col-md-6">
+        <textarea class="form-control" placeholder="Description" [(ngModel)]="newProject.description"></textarea>
+      </div>
+
+      <div class="col-md-3">
+        <label>Start Date</label>
+        <input placeholder="date" class="form-control" type="date" [(ngModel)]="newProject.startDate" />
+      </div>
+
+      <div class="col-md-3">
+        <label>End Date</label>
+        <input placeholder="date" class="form-control" type="date" [(ngModel)]="newProject.endDate" />
+      </div>
+
+      <div class="col-12 text-end">
+        <button class="btn btn-primary px-4" (click)="addProject()">Add Project</button>
+      </div>
+    </div>
+  </div>
+
 </div>
